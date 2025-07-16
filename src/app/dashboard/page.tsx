@@ -1,5 +1,6 @@
 'use client';
 
+import PinnedProjects from '@/components/PinnedProjects';
 import { useSession, signOut } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 
@@ -74,6 +75,8 @@ export default function DashboardPage() {
           <StatCard title="Following" value={stats?.following ?? '--'} />
         </div>
       </div>
+
+      <PinnedProjects/>
     </main>
   );
 }
